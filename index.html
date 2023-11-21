@@ -5,54 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Form</title>
-    <link rel="stylesheet" href="index.css" >
-    
-</head>
-<body>
-    <div class="container">
-        <div class="login_box">
-            <form id="login_form">
-                <h2>Registration Form   </h2>
-                <label for="name">Name</label>
-                <input  required="text" id="i1" name="name" placeholder="Enter Name">
-                <br>
-                <label for="email">Email</label>
-                <input   required type="email" id="i2" name="email" placeholder="enter mail" >
-                <br>
-                
-                <label for="password">Password</label>
-                <input required  type="password" id="password" name="password"  placeholder="enter password">
-                <br>
-                
-                <label for="dob">Date of Birth</label>
-                <input  required type="date" id="i3" name="dob">
-                
-                <br>
-                <label id="check" for="acceptTerms">Accept Terms and Conditions</label>
-                <input required type="checkbox" id="i4" name="acceptTerms">  
-                <br>
-
-                <button id="i5" type="submit">Submit</button>
-            </form>
-        </div>
-        <div id="entries">
-            <h2>Entries</h2>
-            <table id="entryTable">
-                <tr>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Password</th>
-                    <th>Dob</th>
-                    <th>Accepted terms?</th>
-                </tr>
-            </table>
-        </div>
-    
-        </div>
-    </div>
-    <script src="index.js"></script>
-</body>
-</html>
+    <style>
 *{
     margin: 0;
     box-sizing: border-box;
@@ -133,6 +86,52 @@ th, td {
     border: 1px solid #ddd;
     text-align: left;
 }
+</style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="login_box">
+            <form id="login_form">
+                <h2>Registration Form   </h2>
+                <label for="name">Name</label>
+                <input  required="text" id="i1" name="name" placeholder="Enter Name">
+                <br>
+                <label for="email">Email</label>
+                <input   required type="email" id="i2" name="email" placeholder="enter mail" >
+                <br>
+                
+                <label for="password">Password</label>
+                <input required  type="password" id="password" name="password"  placeholder="enter password">
+                <br>
+                
+                <label for="dob">Date of Birth</label>
+                <input  required type="date" id="i3" name="dob">
+                
+                <br>
+                <label id="check" for="acceptTerms">Accept Terms and Conditions</label>
+                <input required type="checkbox" id="i4" name="acceptTerms">  
+                <br>
+
+                <button id="i5" type="submit">Submit</button>
+            </form>
+        </div>
+        <div id="entries">
+            <h2>Entries</h2>
+            <table id="entryTable">
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th>Dob</th>
+                    <th>Accepted terms?</th>
+                </tr>
+            </table>
+        </div>
+    
+        </div>
+    </div>
+    <script>
 // Get reference to the form and table
 const form = document.getElementById('login_form');
 const entryTable = document.getElementById('entryTable');
@@ -140,8 +139,7 @@ const entryTable = document.getElementById('entryTable');
 // Function to handle form submission
 form.addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent the default form submission
-
-    // Get form values
+ // Get form values
     const name = document.getElementById('i1').value;
     const email = document.getElementById('i2').value;
     const password = document.getElementById('password').value;
@@ -169,5 +167,7 @@ form.addEventListener('submit', function(event) {
 
     // Reset the form after submission
     form.reset();
-});
+});</script>
+</body>
+</html>
 
